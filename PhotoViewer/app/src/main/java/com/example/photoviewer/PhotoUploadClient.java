@@ -17,8 +17,7 @@ import java.nio.charset.StandardCharsets;
 public class PhotoUploadClient {
 
     private static final String BASE_URL =
-            "http://10.0.2.2:8000/";
-
+            "https://samz21.pythonanywhere.com/";
     public static void uploadPhoto(
             Context context,
             Uri imageUri,

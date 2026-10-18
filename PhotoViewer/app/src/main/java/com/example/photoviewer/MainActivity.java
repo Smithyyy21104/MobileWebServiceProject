@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private static final String API_URL =
-            "http://10.0.2.2:8000/api_root/Post/";
+            "https://samz21.pythonanywhere.com/api_root/Post/";
 
     private Button btnSync;
     private Button btnUpload;
