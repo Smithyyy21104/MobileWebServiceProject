@@ -74,11 +74,17 @@ Open the PhotoViewer folder in Android Studio.
 4. Tap Sync Photographs to retrieve posts.
 5. Use Upload Photograph to create a new post.
 
-Android emulator server address:
+Current Android cloud server:
 
-http://10.0.2.2:8000/
+https://samz21.pythonanywhere.com/
 
-The Django development server must be running on the host computer.
+Cloud REST API:
+https://samz21.pythonanywhere.com/api_root/Post/
+
+Cloud Django Admin:
+https://samz21.pythonanywhere.com/admin/
+
+The Android application connects to PythonAnywhere using HTTPS.
 
 ## Automated Testing
 
@@ -97,7 +103,7 @@ Coverage report:
 
 - The SQLite database and uploaded media are excluded from Git.
 - Django generates a local development secret key if needed.
-- The Android application uses local HTTP for development testing.
+- The Android application uses HTTPS for cloud synchronization and uploads.
 - Production deployment requires HTTPS and secure Django settings.
 
 ## Course Submission
