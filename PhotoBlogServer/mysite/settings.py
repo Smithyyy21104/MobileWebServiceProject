@@ -42,14 +42,19 @@ if not SECRET_KEY:
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
+DEBUG = os.environ.get("DJANGO_DEBUG", "false").lower() in ("1", "true", "yes")
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
     '10.0.2.2',
+    'samz21.pythonanywhere.com',
 ]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://samz21.pythonanywhere.com',
+]
+
 
 
 
@@ -144,7 +149,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = "static/"
+
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
